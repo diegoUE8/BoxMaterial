@@ -10,7 +10,7 @@ export default class Oggetto extends Object3D {
     // immediately use the texture for material creation
     const material = new MeshStandardMaterial({ map: texture1, normalMap: texture2, roughness: 0.1, metalness: 0.1 });
 
-    const geometry = new BoxBufferGeometry(2, 2, 2);
+    const geometry = new BoxBufferGeometry(3, 3, 3);
     //const material = new MeshStandardMaterial({ color: 0xA197C9, roughness: 0.18, metalness: 0.5 })
     const mesh = new Mesh(geometry, material);
 
