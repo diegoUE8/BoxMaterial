@@ -30,27 +30,40 @@ const fxaaPass = new FXAAPass()
 /* Main scene and camera */
 const scene = new Scene()
 const camera = new PerspectiveCamera(50, resize.width / resize.height, 0.1, 1000)
-const controls = new OrbitControls(camera, { element: renderer.domElement, parent: renderer.domElement, distance: 10, phi: Math.PI * 0.5 })
+const controls = new OrbitControls(camera, { element: renderer.domElement, parent: renderer.domElement, distance: 10, phi: Math.PI * 1 })
 
 /* Lights */
-const frontLight = new PointLight(0xFFFFFF, 1)
-const backLight = new PointLight(0xFFFFFF, 1.5)
+const frontLight = new PointLight(0xFFFFFF, 1.2)
+const backLight = new PointLight(0xFFFFFF, 0.8)
 const frontLight2 = new PointLight(0xFFFFFF, 1)
-const backLight2 = new PointLight(0xFFFFFF, 1.5)
+const backLight2 = new PointLight(0xFFFFFF, 0.8)
 const frontLight3 = new PointLight(0xFFFFFF, 1)
-const backLight3 = new PointLight(0xFFFFFF, 1.5)
+const backLight3 = new PointLight(0xFFFFFF, 0.8)
 scene.add(frontLight)
 scene.add(backLight)
 scene.add(frontLight2)
 scene.add(backLight2)
 scene.add(frontLight3)
 scene.add(backLight3)
+
 frontLight.position.x = 20
+frontLight.position.y = 5
+
 backLight.position.x = -20
+backLight.position.y = -5
+
 frontLight2.position.y = 20
+frontLight2.position.x = 5
+
 backLight2.position.y = -20
+backLight2.position.x = -5
+
 frontLight3.position.z = 20
+frontLight3.position.x = 5
+
 backLight3.position.z = -20
+backLight3.position.z = -5
+
 
 /* Actual content of the scene */
 //const torus = new Torus()
