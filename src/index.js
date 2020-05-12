@@ -36,7 +36,7 @@ const controls = new OrbitControls(camera, { element: renderer.domElement, paren
 const frontLight = new PointLight(0xFFFFFF, 1.2)
 const backLight = new PointLight(0xFFFFFF, 0.8)
 const frontLight2 = new PointLight(0xFFFFFF, 1)
-const backLight2 = new PointLight(0xFFFFFF, 0.8)
+const backLight2 = new PointLight(0xFFFFFF, 1.3)
 const frontLight3 = new PointLight(0xFFFFFF, 1)
 const backLight3 = new PointLight(0xFFFFFF, 0.8)
 scene.add(frontLight)
@@ -62,7 +62,7 @@ frontLight3.position.z = 20
 frontLight3.position.x = 5
 
 backLight3.position.z = -20
-backLight3.position.z = -5
+backLight3.position.x = -5
 
 
 /* Actual content of the scene */
