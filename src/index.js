@@ -4,7 +4,7 @@ import WAGNER from '@superguigui/wagner'
 import BloomPass from '@superguigui/wagner/src/passes/bloom/MultiPassBloomPass'
 import FXAAPass from '@superguigui/wagner/src/passes/fxaa/FXAAPass'
 import resize from 'brindille-resize'
-import Torus from './objects/Torus'
+//import Torus from './objects/Torus'
 import Oggetto from './objects/Oggetto'
 import OrbitControls from './controls/OrbitControls'
 import { gui } from './utils/debug'
@@ -29,7 +29,7 @@ const fxaaPass = new FXAAPass()
 
 /* Main scene and camera */
 const scene = new Scene()
-const camera = new PerspectiveCamera(50, resize.width / resize.height, 0.1, 1000)
+const camera = new PerspectiveCamera(45, resize.width / resize.height, 1, 1000)
 const controls = new OrbitControls(camera, { element: renderer.domElement, parent: renderer.domElement, distance: 10, phi: Math.PI * 1 })
 
 /* Lights */

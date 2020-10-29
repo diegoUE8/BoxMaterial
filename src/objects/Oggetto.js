@@ -4,10 +4,10 @@ export default class Oggetto extends Object3D {
   constructor() {
     super()
 
-    const texture1 = new TextureLoader().load('src/texture/base.jpg');
-    const texture2 = new TextureLoader().load('src/texture/Normal.jpg');
-    const texture3 = new TextureLoader().load('src/texture/glossiness.jpg');
-    const texture4 = new TextureLoader().load('src/texture/bump.jpg');
+    const texture1 = new TextureLoader().load('src/texture/wood_burma_padauk_basecolor.png');
+    const texture2 = new TextureLoader().load('src/texture/wood_burma_padauk_normal.png');
+    const texture3 = new TextureLoader().load('src/texture/wood_burma_padauk_height.png');
+    const texture4 = new TextureLoader().load('src/texture/wood_burma_padauk_normal.png');
 
     // immediately use the texture for material creation
     const material = new MeshStandardMaterial({ map: texture1, normalMap : texture2, alphaMap: texture3, bumpMap: texture4});
